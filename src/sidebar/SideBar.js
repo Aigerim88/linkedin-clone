@@ -15,7 +15,7 @@ function SideBar() {
     <div className='sideBar'>
         <div className='sideBar__top'>
             <img src='https://images.unsplash.com/photo-1666837147745-1c9dea9908a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80' alt='wallpaper' />
-            <Avatar className='sideBar__avatar'/>
+            <Avatar className='sideBar__avatar' src='https://static.onecms.io/wp-content/uploads/sites/6/2020/05/07/MSDVAGI_OR006.jpg'/>
             <h2>Aigerim Erkebaeva</h2>
             <h4>erkebaeva@gmail.com</h4>
         </div>
