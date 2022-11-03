@@ -9,6 +9,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Header() {
+
   return (
     <div className='header'>
 
@@ -17,7 +18,7 @@ function Header() {
 
             <div className='header__search'>
                 <SearchIcon />
-                <input type='text'/>
+                <input placeholder='Search' type='text'/>
             </div>
         </div>
 
@@ -27,7 +28,10 @@ function Header() {
             <HeaderOption Icon={BusinessCenterIcon} title='Jobs' />
             <HeaderOption Icon={ChatIcon} title='Messaging' />
             <HeaderOption Icon={NotificationsIcon} title='Notifications' />
-            <HeaderOption avatar="https://static.onecms.io/wp-content/uploads/sites/6/2020/05/07/MSDVAGI_OR006.jpg" title='me' />
+            <HeaderOption 
+            avatar="https://static.onecms.io/wp-content/uploads/sites/6/2020/05/07/MSDVAGI_OR006.jpg" 
+            title='me' 
+            />
         </div>
 
     </div>

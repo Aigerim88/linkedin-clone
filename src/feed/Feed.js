@@ -11,6 +11,7 @@ import { db } from '../firebase';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import FlipMove from 'react-flip-move'
 
 
 function Feed() {
@@ -49,7 +50,7 @@ function Feed() {
             <div className='feed__input'>
                 <CreateIcon />
                 <form>
-                    <input value={input} onChange={e => setInput(e.target.value)} type='text' />
+                    <input value={input} onChange={(e) => setInput(e.target.value)} type='text' />
                     <button onClick={sendPost} type='submit'>Send</button>
                 </form>
             </div>
@@ -60,16 +61,17 @@ function Feed() {
                 <InputOption Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
             </div>
         </div>
-
-        {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-            <Post 
-                key={id}
-                name={name}
-                description={description}
-                message={message}
-                photoUrl={photoUrl}
-            />
-        ))}
+        <FlipMove>        
+            {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+                <Post 
+                    key={id}
+                    name={name}
+                    description={description}
+                    message={message}
+                    photoUrl={photoUrl}
+                />
+            ))}
+        </FlipMove>
     </div>
   )
 }
